@@ -1,10 +1,23 @@
-# Compiled
+# Intermediate build, test, and editing artifacts
+#*
+*#
 *.elc
+*.html
+*.pdf
+auto/
+tmp*
+tmp/
 
 # Packaging
+.ELPA
+.MELPA
 .cask
+site/
 
 # Backup files
+*.bak
+*.orig
+*.rej
 *~
 
 # Undo-tree save-files
