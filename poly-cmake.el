@@ -74,7 +74,7 @@
   "CMake auto-innermode to identify inner mode.
 See `poly-cmake-mode-matcher' for how the mode of the chunk is
 identified."
-  :head-matcher "^[ \t]*#\\[=*\\[\\.[[:alpha:]]+:$"
+  :head-matcher "^[ \t]*#\\[=*\\[\\.[[:alpha:]]+:\n"
   :tail-matcher "^[ \t]*#\\]=*\\]$"
   :fallback-mode 'text-mode
   :head-mode 'host
