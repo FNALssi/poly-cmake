@@ -96,7 +96,7 @@ identified."
   (interactive "P")
   (if (or arg (car (pm-innermost-span)))
       (self-insert-command (if (numberp arg) arg 1))
-    (if (not (looking-back "^\\([ \t]*\\)#\\["))
+    (if (not (looking-back "^\\([ \t]*\\)#\\[" nil))
         (self-insert-command 1)
       (let ((str (match-string 1)))
         (insert "============================================================[.")
