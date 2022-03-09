@@ -101,9 +101,9 @@ identified."
       (let ((str (match-string 1)))
         (insert "============================================================[.")
         (save-excursion
-          (insert (concat ":\n\n" str "#]============================================================]")
-                  (unless(looking-at "\\s *$")
-                    (newline))))))))
+          (insert ":\n\n" str "#]============================================================]")
+          (unless(looking-at "\\s *$")
+            (newline)))))))
 
 ;;;###autoload
 (setq auto-mode-alist
