@@ -60,10 +60,10 @@
 (require 'polymode)
 
 (defun poly-cmake-mode-matcher ()
-  " Match mode for the code embedded in a CMake comment (#[=...[<x>:
- 1. Extension (e.g. x=`.rst') is looked-up in `auto-mode-alist'
- 2. Local value of `polymode-default-inner-mode'
- 3. `poly-fallback-mode'"
+  "Match mode for the code embedded in a CMake comment (#[=...[<x>:
+1. Extension (e.g. x=`.rst') is looked-up in `auto-mode-alist'
+2. Local value of `polymode-default-inner-mode'
+3. `poly-fallback-mode'"
   (let ((eol (point-at-eol)))
     (save-excursion
       (when (re-search-forward "\\[\\(\\.[[:alpha:]]+\\):" eol t)
@@ -92,7 +92,7 @@ identified."
   :keymap '(("=" . poly-cmake-electric-eq)))
 
 (defun poly-cmake-electric-eq (arg)
-  "Auto-insert an embedded chunk at the appropriate point."
+  "Auto-insert an embedded chunk at ARG."
   (interactive "P")
   (if (or arg (car (pm-innermost-span)))
       (self-insert-command (if (numberp arg) arg 1))
